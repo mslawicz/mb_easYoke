@@ -5,3 +5,25 @@ projectfiles
 mbed-os
 BUILD
 
+mbed-os-ble-utils/BLE_GattServer_CharacteristicWrite/mbed-os
+mbed-os-ble-utils/BLE_GattServer_CharacteristicWrite/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_SupportedFeatures/mbed-os
+mbed-os-ble-utils/BLE_SecurityAndPrivacy/mbed-os
+mbed-os-ble-utils/BLE_SecurityAndPrivacy/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_PeriodicAdvertising/mbed-os
+mbed-os-ble-utils/BLE_PeriodicAdvertising/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_GattServer_ExperimentalServices/mbed-os
+mbed-os-ble-utils/BLE_GattServer_ExperimentalServices/mbed-os-experimental-ble-services
+mbed-os-ble-utils/BLE_GattServer_ExperimentalServices/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_GattServer_AddService/mbed-os
+mbed-os-ble-utils/BLE_GattServer_AddService/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_GattServer_CharacteristicUpdates/mbed-os
+mbed-os-ble-utils/BLE_GattServer_CharacteristicUpdates/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_GattClient_CharacteristicUpdates/mbed-os
+mbed-os-ble-utils/BLE_GattClient_CharacteristicUpdates/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_GattClient_CharacteristicWrite/mbed-os
+mbed-os-ble-utils/BLE_GattClient_CharacteristicWrite/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_GAP/mbed-os
+mbed-os-ble-utils/BLE_GAP/mbed-os-ble-utils
+mbed-os-ble-utils/BLE_Advertising/mbed-os
+mbed-os-ble-utils/BLE_Advertising/mbed-os-ble-utils
