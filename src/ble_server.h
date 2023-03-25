@@ -1,7 +1,11 @@
 #include "ble/BLE.h"
 #include <events/mbed_events.h>
 
-class BleServer
+extern events::EventQueue bleEventQueue;
+
+extern void schedule_ble_events(BLE::OnEventsToProcessCallbackContext *context);
+
+class BleServer : ble::Gap::EventHandler
 {
 public:
     BleServer(BLE& ble, events::EventQueue& eventQueue);

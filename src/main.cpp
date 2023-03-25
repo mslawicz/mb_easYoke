@@ -1,16 +1,21 @@
 #include "ble_server.h"
+#include "logger.h"
 #include "mbed.h"
-#include <events/mbed_events.h>
 #include <chrono>
+#include <events/mbed_events.h>
 
 int main()
 {
+    LOG_ALWAYS("easYoke start");
+
     constexpr std::chrono::microseconds HeartbeatPeriod(500000);
     DigitalOut heartbeatLed(LED2);
     Timer heartbeatTimer;
-    constexpr uint8_t EventQueueLength = 16;
-    events::EventQueue eventQueue(/* event count */ EventQueueLength * EVENTS_EVENT_SIZE);
-    BleServer bleServer(BLE::Instance(), eventQueue);
+
+    BLE& ble = BLE::Instance();
+
+    ble.onEventsToProcess(schedule_ble_events);
+    BleServer bleServer(ble, bleEventQueue);
 
     heartbeatTimer.start();
 
@@ -21,6 +26,9 @@ int main()
             heartbeatLed.write(heartbeatLed.read() != 0 ? 0 : 1);
             heartbeatTimer.reset();
         }
+
+        bleEventQueue.dispatch_once();
+        ThisThread::sleep_for(1);
     }
 }
 
